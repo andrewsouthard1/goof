@@ -59,7 +59,7 @@ jobs:
         run: snyk code test --sarif > snyk-code.sarif || true
  
         # Runs Snyk Open Source (SCA) analysis
-      - name: Snyk Open Source monitor
+      - name: Snyk Open Source test
         run: snyk test --all-projects || true
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
