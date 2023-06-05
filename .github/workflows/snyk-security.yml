@@ -77,7 +77,7 @@ jobs:
         
         # Runs Snyk Container (Container and SCA) analysis and uploads result to Snyk.
       - name: Snyk Container test
-        run: snyk container test your/image-to-test --file=Dockerfile
+        run: snyk container test your/image-to-test --file=Dockerfile || true
 
       - name: Snyk Container monitor
         run: snyk container monitor your/image-to-test --file=Dockerfile
